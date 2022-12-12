@@ -1,5 +1,5 @@
 <body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
-    <section id="project" class="project">
+    <section id="certifications" class="project">
         <h2 class="section-title">CERTIFICATIONS</h2>
         <div *ngIf="images && images.length" class="carousel-container">
             <img *ngFor="let image of images; let i=index" [src]="image.imageSrc" [alt]="image.imageAlt" [ngClass]="{'image-active': selectedIndex === i}" class="fade">

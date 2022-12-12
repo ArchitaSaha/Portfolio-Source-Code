@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsetComponent } from './skillset/skillset.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { WorkComponent } from './work/work.component';
+import { ResearchComponent } from './research/research.component';
 // import { ProjectListComponent } from './project-list/project-list.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { WorkComponent } from './work/work.component';
     SkillsetComponent,
     ContactsComponent,
     WorkComponent,
+    ResearchComponent,
     // ProjectListComponent
   ],
   imports: [
