@@ -1,0 +1,46 @@
+<body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in touch</h2>
+        <div>
+            <!-- ul has 3 mentions in css. change ul to div -->
+            <span>
+                <!-- span, li has 0 mentions in css. change li to span -->
+                <a href="mailto:sahaarchita9@gmail.com">
+                <span class="btn">
+                    <fa-icon [icon]="emailIcon" aria-hidden="true" class="fas icon fa-envelope fa-xl"></fa-icon>
+                    <!-- <i aria-hidden="true" class="fas icon fa-envelope"></i> -->
+                    Email
+                </span>
+                </a>
+            </span>
+            <span>
+                <a href="https://www.linkedin.com/in/archita-saha-31640b162" aria-label="Linkedin">
+                <!-- <a href="https://www.linkedin.com/in/vatsal-mangukiya-3b0370208" aria-label="Linkedin"> -->
+                <span class="btn">
+                    <fa-icon [icon]="linkedIcon" aria-hidden="true" class="fab icon fa-linkedin fa-xl"></fa-icon>
+                    <!-- <i aria-hidden="true" class="fab icon fa-linkedin"></i> -->
+                    Linkedin
+                </span>
+                </a>
+            </span>
+            <span>
+                <a href="https://github.com/ArchitaSaha" aria-label="Github">
+                <span class="btn">
+                    <fa-icon [icon]="githubIcon" aria-hidden="true" class="fab icon fa-github fa-xl"></fa-icon>
+                    <!-- <i aria-hidden="true" class="fab icon fa-github"></i> -->
+                    Github
+                </span>
+                </a>
+            </span>
+            <span>
+                <a href="tel:9163058124" aria-label="Call">
+                <span class="btn">
+                    <fa-icon [icon]="phoneIcon" aria-hidden="true" class="fab icon fa-phone fa-xl"></fa-icon>
+                    <!-- <i aria-hidden="true" class="fab icon fa-linkedin"></i> -->
+                    Call
+                </span>
+                </a>
+            </span>
+        </div>
+    </section>
+</body>
