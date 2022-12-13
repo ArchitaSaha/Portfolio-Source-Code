@@ -11,6 +11,7 @@
 		<div class="container-fluid">
 			<app-header (newItemEvent)="toggleTheme($event)"></app-header>
 			<app-introduction [darkTheme]="darkTheme"></app-introduction>
+			<app-experience [darkTheme]="darkTheme"></app-experience>
 			<app-projects [darkTheme]="darkTheme"></app-projects>
 			<app-skillset [darkTheme]="darkTheme"></app-skillset>
 			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>

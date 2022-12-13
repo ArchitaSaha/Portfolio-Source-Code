@@ -33,6 +33,7 @@
 
 body {
 	margin: 0 auto;
+	margin-bottom: 140px;
 	padding: 0 15%;
 	/* max-width: 1100px; */
 	width: 100%;
@@ -95,12 +96,14 @@ a {
 	flex-basis: 90%;
 	/* background-color: pink; */
 	justify-content: right;
+	min-height: 253px;
 	/* text-align: center; */
 }
 
 .hero-about p {
 	font-size: 1.6rem;
 	margin-left: 10%;
+	margin-top: 30px;
 }
 
 .hero-about .btn {

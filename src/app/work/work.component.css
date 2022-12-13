@@ -114,8 +114,8 @@ a {
     width: 7px;
     height: 7px;
     margin: 1.5px;
-    /* background-color: #fff; */
-    background-color: var(--fg-alt);
+    background-color: #030217;
+    /* background-color: var(--fg-alt); */
     border-radius: 50%;
     display: inline-block;
     transition: opacity 0.6s ease;
@@ -149,7 +149,7 @@ a {
     justify-content: center;
     width: 15%;
     padding: 0;
-    color: #fff;
+    /* color: #fff; */
     color: var(--fg-alt);
     text-align: center;
     background: 0 0;
@@ -167,7 +167,7 @@ a {
 
 .icon-carousel {
     opacity: 0.5;
-    color: #fff;
+    color: #030217;
     transition: all 0.15s ease;
 }
 
