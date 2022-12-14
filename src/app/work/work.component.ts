@@ -16,7 +16,7 @@ export class WorkComponent implements OnInit {
 	@Input() images: carouselImage[] = [];
 	@Input() indicators: boolean = true;
 	@Input() autoSlide: boolean = false;
-	@Input() slideInterval: number = 6000;
+	@Input() slideInterval: number = 10000;
 
 	rightIndicatorIcon = faChevronCircleRight;
 	leftIndicatorIcon = faChevronCircleLeft;

@@ -1,4 +1,3 @@
-<!-- <body class="body-dark"> -->
 <body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
     <header id="top" class="top">
         <a class="icon-border header-title" href="#">AS</a>
@@ -17,21 +16,18 @@
                     <a href="#certifications" class="link">Certifications</a>
                 </li>
                 <li>
-                    <a href="#research" class="link">Research</a>
+                    <a href="#achievements" class="link">Research</a>
                 </li>
                 <li>
                     <a href="#contact" class="link">Contact</a>
                 </li>
             </ul>
             <button aria-label="Toggle theme" (click)="toggleTheme()">
-                <!-- <i aria-hidden="true" class="icon-normal fas fa-moon"></i> -->
                 <fa-icon [icon]="darkTheme ? toggleLightIcon : toggleDarkIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
             </button>
             <button aria-label="Toggle navbar">
-                <!-- <i aria-hidden="true" class="icon-normal fas fa-bars"></i> -->
                 <fa-icon [icon]="hamburgerIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
             </button>
         </nav>
     </header>
-    <!-- <hr> -->
 </body>

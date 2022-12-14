@@ -157,16 +157,15 @@ section {
 	box-shadow: 0 6px 12px midnightblue;
 }
 
-/* .tech-container i:hover {
-	filter: grayscale(100%);
-} */
-
 .tech-container img {
-	height: 6rem;
+	height: 7rem;
+	width: 7rem;
 	margin-top: 0.1rem;
 	margin-bottom: 0.8em;
 	/* width: 5rem; */
 }
+
+
 
 @media (max-width: 580px) {
 	section {

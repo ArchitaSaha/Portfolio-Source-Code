@@ -118,7 +118,7 @@ section {
     position: relative;
     display: flex;
     margin: 0 auto;
-    padding: 3em;
+    padding: 1em;
 	gap: 1em;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -164,6 +164,10 @@ section {
 .container .card .face.face1 .content {
     opacity: 1;
     transition: 0.5s;
+    /* justify-content: center;
+    justify-items: center;
+    align-items: center; */
+    text-align: center;
 }
 
 .container .card:hover .face.face1 .content {
@@ -171,7 +175,7 @@ section {
 }
 
 .container .card .face.face1 .content img {
-    max-width: 100px;
+    max-width: 50px;
 }
 
 .container .card .face.face1 .content h3 {
@@ -180,6 +184,7 @@ section {
     color: var(--text);
     text-align: center;
     font-size: 1.5em;
+    margin-top: 30px;
 }
 
 .container .card .face.face2 {
@@ -198,6 +203,10 @@ section {
     transform: translateY(0);
 }
 
+.container .card .face.face2 .content {
+    text-align: center;
+}
+
 .container .card .face.face.face2 .content p {
     margin: 0;
     padding: 0;
@@ -212,6 +221,7 @@ section {
     padding: 5px;
     border: 1px solid var(--text);
     border-radius: 1.5rem;
+    margin-top: 25px;
 }
 
 .container .card .face.face2 .content a:hover {

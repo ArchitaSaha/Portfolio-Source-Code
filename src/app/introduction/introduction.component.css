@@ -69,13 +69,9 @@ a {
 /* =============
      3. layout
    ============= */
-
 .hero {
 	display: flex;
 	align-items: center;
-}
-
-.hero {
 	margin-top: 6em;
 	justify-content: space-between;
 	margin-left: 10%;

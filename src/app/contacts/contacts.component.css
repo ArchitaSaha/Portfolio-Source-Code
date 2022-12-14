@@ -169,3 +169,7 @@ section {
 .btn:active {
 	transform: translateY(-0.4em);
 }
+
+img {
+	width: 2rem;
+}

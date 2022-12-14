@@ -38,7 +38,7 @@ export class IntroductionComponent implements OnInit, AfterViewInit {
   }
 
   private initVariables(): void {
-    this.renderer.setStyle(this.textElement.nativeElement, "padding", "0.1em");
+    this.renderer.setStyle(this.textElement.nativeElement, "padding", "0em");
     this.renderer.setStyle(
       this.blinkElement.nativeElement,
       "border-right-width",
