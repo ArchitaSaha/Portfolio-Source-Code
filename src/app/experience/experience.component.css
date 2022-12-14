@@ -1,8 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
-
-/* ================
-	 1. variables
-   ================ */
 
    .body-light {
 	--bg: #f5f6f7;
@@ -31,19 +26,12 @@
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-/* =====================
-     2. global styles
-   ===================== */
-
 body {
 	margin: 0 0;
-	/* margin-bottom: 140px; */
 	padding: 0;
-	/* max-width: 1100px; */
 	width: 100%;
 	background-color: var(--bg);
-  /* background-color: lemonchiffon; */
-	color: var(--fg);
+  color: var(--fg);
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.5;
 	transition: background-color 0.1s linear;
@@ -78,14 +66,13 @@ h2 {
 	}
 }
 
-/* Changes */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-div, ul, li, h3, h4, p {
+div, ul, h3, h4, p {
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -93,11 +80,8 @@ div, ul, li, h3, h4, p {
 }
 
 .sectionClass {
-  /* padding: 80px 0px 50px 0px; */
   position: relative;
   display: block;
-  /* padding: 3em; */
-  /* background: rgb(249, 249, 249); */
 }
 
 .row {
@@ -138,8 +122,6 @@ div, ul, li, h3, h4, p {
   top: 3%;
   bottom: 0;
   width: 10px;
-  /* background: #324454; */
-  /* background: lemonchiffon; */
   background: var(--primary);
   left: 13%;
   height: 100%;
@@ -163,25 +145,20 @@ div, ul, li, h3, h4, p {
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-size: 0.9em;
-  /* color: #bdd0db; */
   color: white;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
   font-size: 2.9em;
-  /* color: #3594cb; */
   color: white;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-  /* color: #6cbfee; */
   color: white;
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel {
   margin: 0 0 15px 25%;
-  /* background: rgba(50, 68, 84, 1); */
-  /* background: maroon; */
   background: var(--primary-alt-even);
   color: white;
   padding: 30px;
@@ -195,13 +172,10 @@ div, ul, li, h3, h4, p {
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel:hover {
-  /* box-shadow: 0 6px 12px midnightblue; */
   box-shadow: 0 8px 16px midnightblue;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
-  /* background: #2B3A48; */
-  /* background: powderblue; */
   background: var(--primary-alt-odd);
 }
 
@@ -217,7 +191,6 @@ div, ul, li, h3, h4, p {
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h4 {
-  /* opacity: 0.7; */
   color: rgba(255, 255, 255, 1);
   letter-spacing: 0px;
   font-family: 'Poppins', sans-serif;
@@ -230,11 +203,9 @@ div, ul, li, h3, h4, p {
   text-align: left;
 }
 
-/* .cbp_tmtimeline > li .cbp_tmlabel h4 i { */
   .cbp_tmtimeline > li .cbp_tmlabel h4 img {
   margin-right: 5px;
   vertical-align: middle;
-  /* border-radius: 50%; */
 }
 
 img {
@@ -263,7 +234,6 @@ img {
   width: 150px;
   height: 150px;
   top: 3%;
-  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -273,7 +243,6 @@ img {
   -webkit-font-smoothing: antialiased;
   position: absolute;
   color: #151515;
-  /* background: #324454; */
   background: lavender;
   border-radius: 50%;
   text-align: center;
