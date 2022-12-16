@@ -13,20 +13,41 @@
 			<app-introduction [darkTheme]="darkTheme"></app-introduction>
 			<app-experience [darkTheme]="darkTheme"></app-experience>
 			<app-projects [darkTheme]="darkTheme"></app-projects>
+			<app-education [darkTheme]="darkTheme"></app-education>
 			<app-skillset [darkTheme]="darkTheme"></app-skillset>
-			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>
+			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="10000"></app-work>
 			<app-research [darkTheme]="darkTheme"></app-research>
+			<app-hobbies [darkTheme]="darkTheme"></app-hobbies>
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
 	
 			<footer>
 				<!-- <small>&copy; 2022 Archita Saha</small> -->
-				<small>Archita Saha</small>
+				<!-- <small>Archita Saha</small> -->
+				<button>
+					<a href="https://www.facebook.com/archita.saha.5205">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
+					</a>
+				</button>
+				<button>
+					<a href="https://www.instagram.com/archi__saha/">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+					</a>
+				</button>
+				<button>
+					<a href="https://www.linkedin.com/in/archita-saha">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg">
+					</a>
+				</button>
+				<button style="background-color: white;">
+					<a href="https://github.com/ArchitaSaha">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+					</a>
+				</button>
 			</footer>
 	
 			<div class="scroll-container">
 				<div aria-label="Scroll up" class="scroll-up">
 					<a href="#top">
-						<!-- <i aria-hidden="true" class="fas fa-arrow-up"></i> -->
 						<fa-icon [icon]="scrollIcon" aria-hidden="true" class="fas fa-arrow-up"></fa-icon>
 					</a>
 				</div>

@@ -1,0 +1,215 @@
+/* ================
+	 1. variables
+   ================ */
+
+   .body-light {
+	--bg: #f5f6f7;
+	--bg-alt: #fff;
+    --bg-alt2: #fff;
+	--fg: #444;
+	--fg-alt: #222;
+	--primary: #306cc4;
+	--primary-alt: #185dc7;
+    --primary-alt2: #70a0e7;
+	--primary-div: rgba(40, 40, 200, 0.7);
+	--primary-light: rgba(44, 93, 206, 0.1);
+    --text: navy;
+	--div-border: whitesmoke;
+	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+.body-dark {
+	--bg: #030217;
+	/* --bg-alt: rgb(22 28 41 / 33%); */
+	--bg-alt: rgb(22 28 41 / 50%);
+    --bg-alt2: rgb(22, 16, 52);
+	--fg: #bdbddd;
+	--fg-alt: #cdcdff;
+	--primary: #807ae8;
+	--primary-alt: #706aec;
+    --primary-alt2: #5955a2;
+	--primary-light: rgb(18 17 49 / 44%);
+	--primary-div: rgba(98, 52, 143, 0.7);
+    --text: lavender;
+	--div-border: lavender;
+	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+/* =====================
+     2. global styles
+   ===================== */
+
+::-moz-selection {
+	background: var(--primary);
+	color: var(--bg);
+}
+
+::-webkit-selection,
+::selection {
+	background: var(--primary);
+	color: var(--bg);
+}
+
+body {
+	margin: 0 auto;
+	/* max-width: 1100px; */
+	width: 100%;
+	background-color: var(--bg);
+	color: var(--fg);
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.5;
+	transition: background-color 0.1s linear;
+}
+
+h2 {
+	color: var(--fg-alt);
+	line-height: 1.1;
+    font-size: 1.8em;
+}
+
+@media (max-width: 580px) {
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+/* =============
+     3. layout
+   ============= */
+
+.section-title {
+	padding-top: 0.5em;
+	margin-bottom: 1.5em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.section-title::after {
+	content: '';
+	margin: 0.3em auto 0 auto;
+	display: block;
+	width: 1.5em;
+	border-bottom: 0.2em solid var(--primary);
+}
+
+.stack {
+    padding-top: 3em;
+    margin-top: 5em;
+	/* background-color: azure; */
+}
+
+@media (max-width: 580px) {
+	.stack {
+		margin-top: 2.5em;
+	}
+}
+
+/* Changes */
+.cards-list {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+span.logos {
+    display: inline-block;
+    margin-top: 13%;
+    width: 100%;
+}
+
+span.fab {
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    width: 1/6 * 100%;
+    float: left;
+}
+
+.card {
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    box-shadow: 5px 5px 30px 7px var(--container-shadow);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.card .card_image {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+}
+
+.card .card_image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.card .card_title {
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: -80px;
+    height: 40px;
+}
+
+.card:hover {
+    /* transform: scale(0.9, 0.9); */
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 8px 16px midnightblue;
+    /* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),  */
+        /* -5px -5px 30px 15px rgba(0,0,0,0.22); */
+}
+
+.title-white {
+    color: whitesmoke;
+}
+
+@media all and (max-width: 500px) {
+    .card-list {
+        /* On small screens, we are no longer using row direction but column */
+        flex-direction: column;
+    }
+}
+
+.card_title p {
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(5px);
+    font-family: 'Merriweather';
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 5px 0;
+}
+
+/* Changes v2 */
+.container:hover > *,
+.container:focus-within > * {
+  opacity: 0.4;
+}
+
+.container:hover > :hover,
+.container:focus-within > :focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.container:hover > :focus:not(:hover) {
+	transform: scale(1.05);
+}
+
+.container {
+	pointer-events: none;
+}
+
+.container > * {
+	pointer-events: auto;
+}

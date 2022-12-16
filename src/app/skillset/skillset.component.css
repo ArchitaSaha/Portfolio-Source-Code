@@ -180,3 +180,27 @@ section {
 		font-size: 6rem;
 	}
 }
+
+/* Changes v2 */
+.container:hover > *,
+.container:focus-within > * {
+  opacity: 0.4;
+}
+
+.container:hover > :hover,
+.container:focus-within > :focus {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.container:hover > :focus:not(:hover) {
+	transform: scale(1.05);
+}
+
+.container {
+	pointer-events: none;
+}
+
+.container > * {
+	pointer-events: auto;
+}

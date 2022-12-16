@@ -87,14 +87,12 @@ body {
 footer {
 	display: flex;
 	align-items: center;
-}
-
-footer {
+	flex-wrap: wrap;
 	/* margin-top: 5em; */
 	height: 7em;
-	flex-direction: column;
+	/* flex-direction: row; */
 	justify-content: center;
-	position: absolute;
+	position: relative;
 	left: 0;
 	right: 0;
 	background-color: var(--bg-alt);
@@ -155,4 +153,24 @@ footer small {
 
 footer {
 	background-color: var(--bg);
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	appearance: none;
+	background-color: inherit;
+	transition: transform 0.7s ease-in-out;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+button:hover {
+	transform: rotate(360deg);
+	/* transform: ; */
+}
+
+img {
+	width: 40px;
+	height: 40px;
 }
