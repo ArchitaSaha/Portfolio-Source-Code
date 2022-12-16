@@ -299,7 +299,8 @@ img {
   line-height: 20px;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) { */
+@media (max-width: 812px) {
   .cbp_tmtimeline:before {
     display: none;
   }
@@ -319,6 +320,7 @@ img {
     padding: 50px 30px 30px 30px;
     font-weight: 400;
     font-size: 95%;
+    /* width: 100%; */
     /* float: left; */
   }
 
@@ -328,6 +330,7 @@ img {
 
   .cbp_tmtimeline > li:nth-child(even) .cbp_tmlabel {
     float: right;
+    
   }
 
   .cbp_tmtimeline > li .cbp_tmlabel:after {
