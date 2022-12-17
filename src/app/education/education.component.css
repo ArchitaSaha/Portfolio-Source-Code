@@ -126,6 +126,7 @@ section {
 .eventCard {
 	border-radius: 50%;
 }
+
 .event {
 
     margin-bottom: 20px;
@@ -187,12 +188,13 @@ section {
     font-family: 'EB Garamond';
 	font-size: large;
 	padding-bottom: 1em;
+	padding-top: 10px;
 }
 
 .event .rollover h5 {
     margin: 0;
     font-family: 'EB Garamond';
-	line-height: 22px;
+	line-height: 23px;
 	font-size: medium;
 }
 
