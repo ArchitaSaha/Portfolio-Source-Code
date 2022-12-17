@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faBuildingColumns, faClipboardList, faGraduationCap, faLocationDot, faPercent, faTimeline } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpenReader, faBuildingColumns, faGraduationCap, faHourglassEnd, faLocationDot, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-education',
@@ -10,9 +10,11 @@ export class EducationComponent implements OnInit {
   @Input() darkTheme: boolean = true;
 
   locationIcon = faLocationDot;
-  timelineIcon = faTimeline;
+  timelineIcon = faHourglassEnd;
   graduationIcon = faGraduationCap;
   academyIcon = faBuildingColumns;
+  schoolIcon = faSchool;
+  marksIcon = faBookOpenReader;
 
   constructor() { }
 

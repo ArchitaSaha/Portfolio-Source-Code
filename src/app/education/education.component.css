@@ -122,11 +122,6 @@ section {
 }
 
 /* Changes */
-
-.eventCard {
-	border-radius: 50%;
-}
-
 .event {
 
     margin-bottom: 20px;
@@ -135,11 +130,12 @@ section {
     display: block;
     margin: 0 auto;
     width: 300px;
+	/* padding-top: 30px; */
 }
 
 .event:hover {
 	box-shadow: 0 8px 16px midnightblue;
-	transform: scale(1.1, 1.1);
+	/* transform: scale(1.1, 1.1); */
 }
 
 .event .content {
@@ -218,7 +214,7 @@ section {
 
 .container:hover > :hover,
 .container:focus-within > :focus {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   opacity: 1;
 }
 
