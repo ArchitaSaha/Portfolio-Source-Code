@@ -114,19 +114,19 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* span.logos {
+span.logos {
     display: inline-block;
     margin-top: 13%;
     width: 100%;
-} */
+}
 
-/* span.fab {
+span.fab {
     display: block;
     text-align: center;
     font-size: 22px;
     width: 1/6 * 100%;
     float: left;
-} */
+}
 
 .card {
     margin: 30px auto;
@@ -164,7 +164,7 @@ h2 {
 
 .card:hover {
     /* transform: scale(0.9, 0.9); */
-    transform: scale(1.2, 1.2);
+    /* transform: scale(1.2, 1.2); */
     box-shadow: 0 8px 16px midnightblue;
     /* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),  */
         /* -5px -5px 30px 15px rgba(0,0,0,0.22); */
