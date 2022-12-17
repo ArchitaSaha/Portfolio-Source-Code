@@ -114,19 +114,19 @@ h2 {
     flex-wrap: wrap;
 }
 
-span.logos {
+/* span.logos {
     display: inline-block;
     margin-top: 13%;
     width: 100%;
-}
+} */
 
-span.fab {
+/* span.fab {
     display: block;
     text-align: center;
     font-size: 22px;
     width: 1/6 * 100%;
     float: left;
-}
+} */
 
 .card {
     margin: 30px auto;
