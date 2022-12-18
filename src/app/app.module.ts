@@ -6,6 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { MatIconModule } from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list'
+import {MatButtonModule} from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +25,7 @@ import { ResearchComponent } from './research/research.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
+import { NavtestComponent } from './navtest/navtest.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,8 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     ResearchComponent,
     ExperienceComponent,
     EducationComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    NavtestComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,13 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
     FormsModule,
     BrowserAnimationsModule,
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatToolbarModule,
+    MatIconModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule
     // AngularFontAwesomeModule,
     // Add this in angular.json
     // "node_modules/font-awesome/css/font-awesome.css",

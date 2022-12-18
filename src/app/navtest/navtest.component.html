@@ -1,0 +1,46 @@
+<body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
+    <!-- <div style="height: 60vh;"> -->
+    <div ngStyle.lt-md="height:-40vh" id="element" class="hero">
+        <mat-toolbar>
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="setHeight();sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+                    <!-- <mat-icon>fxHide.lt-md</mat-icon> -->
+                    <fa-icon [icon]="hamburgerIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
+                </button>
+                <span><a class="icon-border header-title" href="#top">AS</a></span>
+                
+                <span class="menu-spacer"></span>
+                <div fxShow="true" fxHide.lt-md>
+                    <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+                    <a href="#workexperience" class="link" mat-button>Experience</a>
+                    <a href="#education" class="link" mat-button>Education</a>
+                    <a href="#skillset" class="link" mat-button>Skills</a>
+                    <a href="#project" class="link" mat-button>Projects</a>
+                    <a href="#certifications" class="link" mat-button>Certifications</a>
+                    <a href="#achievements" class="link" mat-button>Coding</a>
+                    <a href="#hobbies" class="link" mat-button>Hobbies</a>
+                    <a href="#contact" class="link" mat-button>Contact</a>
+                </div>
+                <button aria-label="Toggle theme" (click)="toggleTheme()">
+                    <fa-icon [icon]="darkTheme ? toggleLightIcon : toggleDarkIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <mat-sidenav-container fxFlexFill fxHide.gt-sm ngStyle.gt-sm="height: -60vh">
+            <mat-sidenav #sidenav>
+                <mat-nav-list>
+                    <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
+                    <a href="#workexperience" class="link" mat-list-item>Experience</a>
+                    <a href="#education" class="link" mat-list-item>Education</a>
+                    <a href="#skillset" class="link" mat-list-item>Skills</a>
+                    <a href="#project" class="link" mat-list-item>Projects</a>
+                    <a href="#certifications" class="link" mat-list-item>Certifications</a>
+                    <a href="#achievements" class="link" mat-list-item>Coding</a>
+                    <a href="#hobbies" class="link" mat-list-item>Hobbies</a>
+                    <a href="#contact" class="link" mat-list-item>Contact</a>
+                </mat-nav-list>
+            </mat-sidenav>
+        </mat-sidenav-container>
+    </div>
+</body>

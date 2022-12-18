@@ -44,8 +44,8 @@
 
 body {
 	margin: 0 0;
-	/* max-width: 1100px; */
-	width: 100%;
+	width: 99%;
+	/* overflow: hidden; */
 	background-color: var(--bg);
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
@@ -54,100 +54,14 @@ body {
 	transition: background-color 0.1s linear;
 }
 
-ul {
-	list-style-type: none;
-}
-
 button {
 	cursor: pointer;
 	font-family: inherit;
 	background-color: inherit;
 	border: none;
 	outline: none;
-	margin-left: 12px;
-	margin-right: 15px;
-}
-
-a {
-	text-decoration: none;
-}
-
-.link {
-	padding: 0 0 0.12em 0;
-	position: relative;
-	color: var(--primary);
-}
-
-.link:hover {
-	color: var(--primary);
-}
-
-.link:active {
-	color: var(--primary-alt);
-}
-
-.link::before {
-	content: '';
-	display: inline;
-	width: 0%;
-	height: 0.12em;
-	position: absolute;
-	bottom: 0;
-	background-color: var(--primary);
-	transition: width 0.2s ease-out;
-}
-
-.link:hover::before {
-	width: 100%;
-}
-
-body::after {
-	content: '';
-	margin: 0.2em auto 0 auto;
-	display: block;
-	/* width: 1.5em; */
-	width: 90%;
-	border-bottom: 0.2em solid var(--primary);
-}
-
-/* =============
-     3. layout
-   ============= */
-
-header, nav, nav ul {
-	display: flex;
-	align-items: center;
-	overflow: hidden;
-}
-
-header {
-	height: 6em;
-	justify-content: space-between;
-}
-
-nav li {
-	font-weight: 500;
-	margin: 0 0.5em;
-	margin-top: 1em;
-}
-
-@media (max-width: 580px) {
-	nav ul {
-		flex-direction: column;
-		padding: 4em 0;
-		position: absolute;
-		right: 0;
-		left: 0;
-		top: 5em;
-		background-color: var(--bg);
-		width: 0;
-		overflow: hidden;
-		transition: width 0.2s ease-in-out;
-	}
-
-	nav li {
-		margin: 0.5em 0;
-	}
+	/* margin-left: 15px;
+	margin-right: 15px; */
 }
 
 /* =================
@@ -208,62 +122,85 @@ nav li {
 	margin-left: 1%;
 }
 
-/* ============
-   5. utilities
-   ============ */
+/* Changes v1 */
+.menu-spacer {
+    flex: 1 1 auto;
+  }
 
-/* .fa-bars {
-	display: none;
-} */
-
-.header-title {
-	font-weight: 700;
-	text-shadow: 0 4px 2px rgba(0, 0, 0, 0.2);
+mat-toolbar-row{
+    background-color: var(--bg);
+	/* background-color: lavender; */
+	font-weight: 500;
+	margin: 0 0.5em;
+	/* margin-top: 1em; */
 }
 
-nav .link {
+.hero {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+/* Changes v2 */
+mat-nav-list {
+	background-color: var(--bg-alt);
+	/* background-color: lemonchiffon; */
+	width: 100%;
+}
+
+mat-sidenav {
+	width: 100%;
+	/* transition: 1s; */
+}
+
+a {
+	text-decoration: none;
+	/* margin: 0 10px; */
+	margin-right: 20px;
+}
+
+.link {
+	padding: 0 0 0.12em 0;
+	position: relative;
 	color: var(--fg-alt);
 }
 
-@media (max-width: 580px) {
-	.fa-bars {
-		display: flex;
-	}
+.link:hover {
+	color: var(--fg-alt);
 }
 
-/* Changes */
-
-
-#menu-toggle {
-	display: none;
+.link:active {
+	color: var(--fg-alt);
 }
 
-@media all and (max-width: 700px) and (min-width: 0px) {
-	.burger button {
-		display: block;
-		height: 70px;
-		width: 70px;
-		line-height: 70px;
-		text-align: center;
-		color: #fff;
-		font-size: 1.8rem;
-		background: #000;
-		cursor: pointer;
-	}
+.link::before {
+	content: '';
+	display: inline;
+	width: 0%;
+	height: 0.12em;
+	position: absolute;
+	bottom: 0;
+	background-color: var(--primary);
+	transition: width 0.2s ease-out;
+}
 
-	.burger .menu {
-		display: none;
-	}
+.link:hover::before {
+	width: 100%;
+}
 
-	.burger li {
-		width: 100%;
-	}
+/* body::after {
+	content: '';
+	margin: 0.2em auto 0 auto;
+	display: block;
+	width: 1.5em;
+	width: 90%;
+	border-bottom: 0.2em solid var(--primary);
+} */
 
-	#menu-toggle:checked + .nav {
-		display: block;
-	}
-
-	.burger label:active .nav {
-		display: none;
-	}
+#element::after {
+	content: '';
+	margin: 0.2em auto 0 auto;
+	display: block;
+	/* width: 1.5em; */
+	width: 90%;
+	border-bottom: 0.2em solid var(--primary);
 }

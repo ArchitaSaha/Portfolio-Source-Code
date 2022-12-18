@@ -9,7 +9,9 @@
 		<script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
 	
 		<div class="container-fluid">
-			<app-header (newItemEvent)="toggleTheme($event)"></app-header>
+			<!-- <app-navigation (newItemEvent)="toggleTheme($event)"></app-navigation> -->
+			<!-- <app-header (newItemEvent)="toggleTheme($event)"></app-header> -->
+			<app-navtest (newItemEvent)="toggleTheme($event)"></app-navtest>
 			<app-introduction [darkTheme]="darkTheme"></app-introduction>
 			<app-experience [darkTheme]="darkTheme"></app-experience>
 			<app-education [darkTheme]="darkTheme"></app-education>

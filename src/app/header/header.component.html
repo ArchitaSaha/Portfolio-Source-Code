@@ -1,8 +1,8 @@
 <body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
     <header id="top" class="top">
         <a class="icon-border header-title" href="#">AS</a>
-        <nav>
-            <ul>
+        <nav class="burger">
+            <ul class="menu nav">
                 <li>
                     <a href="#workexperience" class="link">Work</a>
                 </li>
@@ -31,9 +31,10 @@
             <button aria-label="Toggle theme" (click)="toggleTheme()">
                 <fa-icon [icon]="darkTheme ? toggleLightIcon : toggleDarkIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
             </button>
-            <!-- <button aria-label="Toggle navbar">
+            <button for="menu-toggle" aria-label="Toggle navbar">
                 <fa-icon [icon]="hamburgerIcon" aria-hidden="true" class="icon-normal fas fa-bars"></fa-icon>
-            </button> -->
+            </button>
+            <input type="checkbox" id="menu-toggle">
         </nav>
     </header>
 </body>
