@@ -22,13 +22,13 @@ export class WorkComponent implements OnInit {
 	leftIndicatorIcon = faChevronCircleLeft;
 
 	selectedIndex = 0;
-
+	
 	constructor() {
 	}
 
 	ngOnInit(): void {
 		if(this.autoSlide) {
-		this.autoSlideImages();
+			this.autoSlideImages();
 		}
 	}
 
@@ -38,25 +38,23 @@ export class WorkComponent implements OnInit {
 
 	onPrevClick(): void {
 		if(this.selectedIndex === 0) {
-		this.selectedIndex = this.images.length - 1;
+			this.selectedIndex = this.images.length - 1;
 		}
 		else {
-		this.selectedIndex--;
+			this.selectedIndex--;
 		}
 	}
 
 	onNextClick(): void {
 		if(this.selectedIndex === this.images.length - 1) {
-		this.selectedIndex = 0;
+			this.selectedIndex = 0;
 		}
 		else {
-		this.selectedIndex++;
+			this.selectedIndex++;
 		}
 	}
 
 	autoSlideImages(): void {
-		setInterval(() => {
-		this.onNextClick();
-		}, this.slideInterval);
+		setInterval(() => { this.onNextClick(); }, this.slideInterval);
 	}
 }
