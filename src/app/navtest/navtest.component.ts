@@ -31,7 +31,7 @@ export class NavtestComponent implements OnInit {
 	setHeight() {
 		var obj: any = document.getElementById("element");
 		// (obj).style.height = "60vh";
-		if(this.smallScreen)	(obj).style.height = "60vh";
+		if(this.smallScreen)	(obj).style.height = "420px";
 		else					(obj).style.height = "0vh";
 		this.smallScreen = !this.smallScreen;	
 	}

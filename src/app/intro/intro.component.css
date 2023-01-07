@@ -7,6 +7,7 @@
    .body-light {
 	--bg: #f5f6f7;
 	--bg-alt: #fff;
+    /* --bg-alt: rgb(f5 f6 f7 / 100%); */
 	--fg: #444;
 	--fg-alt: #222;
 	--primary: #306cc4;
@@ -193,7 +194,7 @@ a {
 .icons a fa-icon {
     cursor: pointer;
     padding: 5px;
-    font-size: 30px;
+    font-size: 24px;
     transition: 0.2s;
     color: var(--primary);
 }
