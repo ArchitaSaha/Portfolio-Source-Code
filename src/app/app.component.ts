@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -40,6 +41,16 @@ export class AppComponent {
 			imageAlt: 'Internshala : Core Java'
 		}
 	];
+
+	constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2) { }
+
+	ngAfterViewInit(): void {
+		if (isPlatformBrowser(this.platformId)) {
+			let loader = this.renderer.selectRootElement('#loader');
+			if (loader.style.display != "none") loader.style.display = "none"; //hide loader
+			console.log("test view init")
+		}
+	}
 
 	toggleTheme(theme: boolean) {
 		this.darkTheme = theme;

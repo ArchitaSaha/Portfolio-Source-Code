@@ -6,11 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { MatIconModule } from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list'
-import {MatButtonModule} from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list'
+import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +26,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { NavtestComponent } from './navtest/navtest.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { NavtestComponent } from './navtest/navtest.component';
     ExperienceComponent,
     EducationComponent,
     HobbiesComponent,
-    NavtestComponent
+    NavtestComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,

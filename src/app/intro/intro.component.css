@@ -10,14 +10,17 @@
 	--fg: #444;
 	--fg-alt: #222;
 	--primary: #306cc4;
-	--primary-alt: #185dc7;
+	--primary-alt: #1557ba;
 	--primary-light: rgba(44, 93, 206, 0.1);
 	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+
+    --cover: url(https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg);
 }
 
 .body-dark {
 	--bg: #030217;
-	--bg-alt: rgb(22 28 41 / 33%);
+	/* --bg-alt: rgb(22 28 41 / 33%); */
+    --bg-alt: rgb(22 28 41 / 50%);
 	--fg: #bdbddd;
 	--fg-alt: #cdcdff;
 	--primary: #807ae8;
@@ -25,6 +28,8 @@
 	--primary-light: rgb(18 17 49 / 44%);
 	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    
+    --cover: url(https://i.imgur.com/jxyuizJ.jpeg);
 }
 
 /* =====================
@@ -44,26 +49,8 @@ body {
 	transition: background-color 0.1s linear;
 }
 
-h1 {
-	color: var(--fg-alt);
-	line-height: 1.1;
-    font-size: 5rem;
-}
-
 a {
 	text-decoration: none;
-}
-
-@media (max-width: 768px) {
-	h1 {
-		font-size: 4rem;
-	}
-}
-
-@media (max-width: 320px) {
-	h1 {
-		font-size: 3rem;
-	}
 }
 
 /* =============
@@ -74,45 +61,34 @@ a {
 	align-items: center;
 	margin-top: 6em;
 	justify-content: space-between;
-	margin-left: 10%;
-}
-
-.hero h1 {
-	display: flex;
-	flex-direction: column;
-	flex-basis: 50%;
-}
-
-.hero-name {
-	color: var(--primary);
-	font-size: 7rem;
+	padding: 2em 2em 3em 3em;
 }
 
 .hero-about {
 	flex-basis: 90%;
-	/* background-color: pink; */
 	justify-content: right;
 	min-height: 253px;
-	/* text-align: center; */
+    margin-left: 6em;
 }
 
 .hero-about p {
 	font-size: 1.6rem;
-	margin-left: 10%;
+	/* margin-left: 10%; */
 	margin-top: 30px;
+    /* text-align: justify; */
 }
 
 .hero-about .btn {
 	margin-top: 2.2em;
 	/* background-color: lemonchiffon; */
-	margin-left: 10%;
+	/* margin-left: 10%; */
 }
 
 .hero {
 	margin-right: 0.2em;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 815px) {
 	.hero,
 	.hero-about {
 		margin-top: 2.5em;
@@ -123,10 +99,12 @@ a {
 		flex-direction: column;
 	}
 
-	.hero h1,
 	.hero-about {
 		width: 100%;
-	}
+        margin-left: 0;
+        justify-items: center;
+        text-align: center;
+    }
 }
 
 /* =================
@@ -144,9 +122,6 @@ a {
 	padding: 1em 1.6em;
 	background-color: var(--primary);
 	color: var(--bg);
-
-	/* Changes */
-	/* box-shadow: 6px 6px 12px #97c3c4, -6px -6px 12px #cdffff; */
 }
 
 .btn:hover {
@@ -158,7 +133,71 @@ a {
 }
 
 /* Changes */
-.image {
-	height: 250px;
-	width: 200px;
+.card {
+    padding: 15px;
+    width: 450px;
+    text-align: center;
+    user-select: none;
+    
+	background-color: var(--bg-alt);
+	box-shadow: var(--container-shadow);
+	border-radius: 1em;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px midnightblue;
+}
+
+.cover-photo {
+    position: relative;
+    background: var(--cover);
+    background-size: cover;
+    height: 120px;
+    border-radius: 5px 5px 0 0;
+}
+
+.profile {
+    position: absolute;
+    width: 120px;
+    bottom: -60px;
+    left: 15px;
+    border-radius: 50%;
+    /* border: 2px solid #222;
+    background: #222; */
+    border: 2px solid var(--bg-alt);
+    background: var(--bg-alt);
+    padding: 5px;
+}
+
+.profile-name {
+    font-size: 20px;
+    margin: 25px 0 0 120px;
+    /* color: #fff; */
+    color: var(--fg-alt);
+}
+
+.about {
+    margin-top: 30px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.icons {
+    width: 180px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 15px; */
+}
+
+.icons a fa-icon {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 30px;
+    transition: 0.2s;
+    color: var(--primary);
+}
+
+.icons a fa-icon:hover {
+    color: var(--primary-alt);
 }
