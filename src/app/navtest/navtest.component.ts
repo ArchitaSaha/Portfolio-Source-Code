@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { elementAt } from 'rxjs';
 
 @Component({
   selector: 'app-navtest',
@@ -42,7 +43,29 @@ export class NavtestComponent implements OnInit {
 			(obj).style.marginBottom = "60px";
 			// (obj).style.borderBottom = "0.2em solid salmon";
 		}
-		// this.smallScreen = !this.smallScreen;
 	}
 
+// 	setHeight2() {
+// 		var obj: any = document.getElementById("element");
+
+// 		if((obj).hasAttribute("modified"))
+// 		{
+// 			(obj).removeAttribute("modified");
+// 			console.log('hello');
+// 		}
+// 		else
+// 		{
+// 			(obj).setAttribute("modified", "1");
+// 			console.log('bye');
+// 		}
+
+// 		console.log(this.smallScreen)
+// 		this.smallScreen = !this.smallScreen;
+// 		if(this.smallScreen)	(obj).style.height = "410px";
+// 		else
+// 		{
+// 			(obj).style.height = "0";
+// 			(obj).style.marginBottom = "60px";
+// 		}
+// 	}
 }

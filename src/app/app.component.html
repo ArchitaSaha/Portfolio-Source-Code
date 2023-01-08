@@ -1,13 +1,15 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	</head>
-	<body class="mainBody" [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Moon+Dance&display=swap" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 		<script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
-	
+	</head>
+	<body class="mainBody" [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
 		<div class="container-fluid">
 			<!-- <app-header (newItemEvent)="toggleTheme($event)"></app-header> -->
 			<app-navtest (newItemEvent)="toggleTheme($event)"></app-navtest>
@@ -24,8 +26,9 @@
 	
 			<footer>
 				<!-- <small>&copy; 2022 Archita Saha</small> -->
-				<!-- <small>Archita Saha</small> -->
-				<button>
+				<!-- <small>YOU'RE ALWAYS ONE <i>decision</i> AWAY FROM A <i>totally</i> DIFFERENT LIFE</small> -->
+				<small>Mindset is everything...</small>
+				<!-- <button>
 					<a target="_blank" href="https://www.facebook.com/archita.saha.5205">
 						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">
 					</a>
@@ -44,7 +47,7 @@
 					<a target="_blank" href="https://github.com/ArchitaSaha">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
 					</a>
-				</button>
+				</button> -->
 			</footer>
 	
 			<div class="scroll-container">

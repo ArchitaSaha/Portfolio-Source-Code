@@ -85,7 +85,6 @@ body {
    ============= */
 
 footer {
-	/* position: fixed; */
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -97,7 +96,6 @@ footer {
 	left: 0;
 	right: 0;
 	background-color: var(--bg-alt);
-	/* background-color: coral; */
 	box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1);
 }
 
@@ -108,6 +106,19 @@ footer ul {
 footer small {
 	font-weight: 500;
 	margin-top: 0.5em;
+	/* font-family: Merriweather; */
+	font-family: Moon Dance;
+	letter-spacing: 0.1em;
+	word-spacing: 0.5em;
+	font-size: large;
+	/* font-style: italic; */
+}
+
+footer small i {
+	font-family: Moon Dance;
+	font-weight: 600;
+	font-size: medium;
+	letter-spacing: 0.3em;
 }
 
 /* =================

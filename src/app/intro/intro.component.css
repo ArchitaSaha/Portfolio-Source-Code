@@ -13,7 +13,8 @@
 	--primary: #306cc4;
 	--primary-alt: #1557ba;
 	--primary-light: rgba(44, 93, 206, 0.1);
-	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+	/* --container-shadow: 0 2px 4px rgb(0 0 0 / 10%); */
+	--container-shadow: 0 2px 4px rgb(0 0 0 / 40%);
 
     --cover: url(https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg);
 }
@@ -27,8 +28,8 @@
 	--primary: #807ae8;
 	--primary-alt: #706aec;
 	--primary-light: rgb(18 17 49 / 44%);
-	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	/* --container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
+	--container-shadow: 0 2px 4px rgba(53, 57, 102, 0.726);
     
     --cover: url(https://i.imgur.com/jxyuizJ.jpeg);
 }
@@ -197,8 +198,18 @@ a {
     font-size: 24px;
     transition: 0.2s;
     color: var(--primary);
+	box-shadow: var(--container-shadow);
+	border-radius: 50%;
+	display: flex;
 }
 
 .icons a fa-icon:hover {
     color: var(--primary-alt);
+	display:flex;
+	box-shadow: var(--container-shadow);
+    -webkit-transform: rotate(360deg); 
+       -moz-transform: rotate(360deg); 
+        -ms-transform: rotate(360deg); 
+         -o-transform: rotate(360deg);  
+            transform: rotate(360deg);
 }

@@ -196,6 +196,10 @@ a {
 	border-bottom: 0.2em solid var(--primary);
 } */
 
+/* #element {
+	border-bottom: 0.2em solid var(--bg);
+} */
+
 #element::after {
 	content: '';
 	margin: 0.2em auto 60px auto;
@@ -204,3 +208,11 @@ a {
 	width: 90%;
 	border-bottom: 0.2em solid var(--primary);
 }
+
+/* #element[modified]::after {
+	content: '';
+	margin: 0.2em auto 60px auto;
+	display: block;
+	width: 90%;
+	border-bottom: 0.2em solid var(--primary);
+} */
