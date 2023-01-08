@@ -198,7 +198,7 @@ a {
 
 #element::after {
 	content: '';
-	margin: 0.2em auto 0 auto;
+	margin: 0.2em auto 60px auto;
 	display: block;
 	/* width: 1.5em; */
 	width: 90%;

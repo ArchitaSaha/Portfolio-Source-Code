@@ -172,18 +172,6 @@ button:hover {
 }
 
 img {
-	width: 40px;
-	height: 40px;
+	width: 32px;
+	height: 32px;
 }
-
-header {
-	position: sticky;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background-color: transparent;
-	/* background-color: #cc0000; */
-	color: white;
-	font-family: 'Exo 2', sans-serif;
-	padding: 1em;
-  }

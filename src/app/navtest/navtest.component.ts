@@ -12,7 +12,8 @@ export class NavtestComponent implements OnInit {
 	toggleLightIcon = faSun;
 
 	darkTheme = true;
-	smallScreen = true;
+	// smallScreen = true;
+	smallScreen = false;
 	isShowing: boolean = false;
 
 	@Output() newItemEvent = new EventEmitter<boolean>();
@@ -30,10 +31,18 @@ export class NavtestComponent implements OnInit {
 
 	setHeight() {
 		var obj: any = document.getElementById("element");
+		console.log(this.smallScreen)
+		this.smallScreen = !this.smallScreen;
 		// (obj).style.height = "60vh";
-		if(this.smallScreen)	(obj).style.height = "420px";
-		else					(obj).style.height = "0vh";
-		this.smallScreen = !this.smallScreen;	
+		// if(this.smallScreen)	(obj).style.height = "60vh";
+		if(this.smallScreen)	(obj).style.height = "410px";
+		else
+		{
+			(obj).style.height = "0";
+			(obj).style.marginBottom = "60px";
+			// (obj).style.borderBottom = "0.2em solid salmon";
+		}
+		// this.smallScreen = !this.smallScreen;
 	}
 
 }

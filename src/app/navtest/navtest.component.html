@@ -1,6 +1,7 @@
 <body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
     <!-- <div style="height: 60vh;"> -->
-    <div ngStyle.lt-md="height:-40vh" id="element" class="hero">
+    <!-- <div ngStyle.lt-md="height:-40vh" id="element" class="hero"> -->
+    <div ngStyle.lt-md="height:-360px" id="element" class="hero">
         <mat-toolbar>
             <mat-toolbar-row>
                 <button mat-icon-button (click)="setHeight();sidenav.toggle()" fxShow="true" fxHide.gt-sm>
@@ -27,7 +28,8 @@
             </mat-toolbar-row>
         </mat-toolbar>
 
-        <mat-sidenav-container fxFlexFill fxHide.gt-sm ngStyle.gt-sm="height: -60vh">
+        <!-- <mat-sidenav-container fxFlexFill fxHide.gt-sm ngStyle.gt-sm="height: -60vh"></mat-sidenav-container> -->
+        <mat-sidenav-container fxFlexFill fxHide.gt-sm ngStyle.gt-sm="height: -420px">
             <mat-sidenav #sidenav>
                 <mat-nav-list>
                     <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
