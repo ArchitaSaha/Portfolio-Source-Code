@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { MatIconModule } from '@angular/material/icon';
@@ -27,6 +28,7 @@ import { EducationComponent } from './education/education.component';
 import { HobbiesComponent } from './hobbies/hobbies.component';
 import { NavtestComponent } from './navtest/navtest.component';
 import { IntroComponent } from './intro/intro.component';
+import { TimeComponent } from './time/time.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { IntroComponent } from './intro/intro.component';
     EducationComponent,
     HobbiesComponent,
     NavtestComponent,
-    IntroComponent
+    IntroComponent,
+    TimeComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { IntroComponent } from './intro/intro.component';
     FlexLayoutModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
     // AngularFontAwesomeModule,
     // Add this in angular.json
     // "node_modules/font-awesome/css/font-awesome.css",

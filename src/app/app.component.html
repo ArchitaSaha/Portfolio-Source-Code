@@ -12,7 +12,8 @@
 	<body class="mainBody" [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
 		<div class="container-fluid">
 			<!-- <app-header (newItemEvent)="toggleTheme($event)"></app-header> -->
-			<app-navtest (newItemEvent)="toggleTheme($event)"></app-navtest>
+			<app-navtest [darkTheme]="darkTheme" (newItemEvent)="toggleTheme($event)"></app-navtest>
+			<!-- <app-time [darkTheme]="darkTheme"></app-time> -->
 			<app-intro [darkTheme]="darkTheme"></app-intro>
 			<!-- <app-introduction [darkTheme]="darkTheme"></app-introduction> -->
 			<app-experience [darkTheme]="darkTheme"></app-experience>
@@ -25,9 +26,16 @@
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
 	
 			<footer>
-				<!-- <small>&copy; 2022 Archita Saha</small> -->
-				<!-- <small>YOU'RE ALWAYS ONE <i>decision</i> AWAY FROM A <i>totally</i> DIFFERENT LIFE</small> -->
-				<small>Mindset is everything...</small>
+				<p class="txt-time">{{time | date:'mediumTime'}}</p>
+				<p class="txt-greetings">&nbsp;{{msg}}&nbsp;</p>
+				<fa-icon [icon]="locationIcon"></fa-icon>
+        		<p class="txt-location">&nbsp;{{location}}&nbsp;</p>
+				<fa-icon [icon]="temperatureIcon"></fa-icon>
+        		<p class="txt-temperature">&nbsp;{{temperature}} °C</p>
+				<!-- <p>&nbsp;{{wcode}}</p> -->
+				<p>&nbsp;{{weather}}</p>
+				<small>&nbsp;Mindset is everything...</small>
+				
 				<!-- <button>
 					<a target="_blank" href="https://www.facebook.com/archita.saha.5205">
 						<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png">

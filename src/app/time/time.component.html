@@ -1,0 +1,7 @@
+<body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
+    <div class="context">
+        <p class="txt-time">{{time | date:'mediumTime'}}</p>
+        <p class="txt-greetings">{{msg}}</p>
+        <p id="location" class="txt-location">{{location}}</p>
+    </div>
+</body>
