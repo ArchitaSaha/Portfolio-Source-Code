@@ -6,7 +6,8 @@
 
 .body-light {
 	--bg: #f5f6f7;
-	--bg-alt: #fff;
+	/* --bg-alt: #fff; */
+	--bg-alt: rgba(177, 202, 236, 0.7);
 	--fg: #444;
 	--fg-alt: #222;
 	--primary: #306cc4;
@@ -31,27 +32,38 @@
      2. global styles
    ===================== */
 
-::-moz-selection {
+/* ::-moz-selection {
 	background: var(--primary);
 	color: var(--bg);
-}
+} */
 
-::-webkit-selection,
+/* ::-webkit-selection,
 ::selection {
 	background: var(--primary);
 	color: var(--bg);
-}
+} */
 
 body {
 	margin: 0 0;
-	width: 99%;
+	width: 100%;
 	/* overflow: hidden; */
 	background-color: var(--bg);
+	/* background-color: salmon; */
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
 	font-size: large;
 	line-height: 1.5;
 	transition: background-color 0.1s linear;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	height: 110px;
+
+	-webkit-box-shadow: 5px 0px 15px 0px var(--primary);
+    -moz-box-shadow: 5px 0px 8px 15px var(--primary);
+    box-shadow: 5px 0px 15px 0px var(--primary);
 }
 
 button {
@@ -162,14 +174,18 @@ a {
 	padding: 0 0 0.12em 0;
 	position: relative;
 	color: var(--fg-alt);
+	/* color: mediumvioletred */
 }
 
 .link:hover {
 	color: var(--fg-alt);
+	/* color: salmon; */
+	transform: ease-in-out;
 }
 
 .link:active {
 	color: var(--fg-alt);
+	/* color: seagreen; */
 }
 
 .link::before {
@@ -180,39 +196,25 @@ a {
 	position: absolute;
 	bottom: 0;
 	background-color: var(--primary);
-	transition: width 0.2s ease-out;
+	/* background-color: red; */
+	/* color: lime; */
+	transition: width 0.3s ease-out;
 }
 
 .link:hover::before {
 	width: 100%;
+	/* background-color: lime; */
 }
 
-/* body::after {
-	content: '';
-	margin: 0.2em auto 0 auto;
-	display: block;
-	width: 1.5em;
-	width: 90%;
-	border-bottom: 0.2em solid var(--primary);
-} */
-
-/* #element {
-	border-bottom: 0.2em solid var(--bg);
-} */
-
-#element::after {
-	content: '';
-	margin: 0.2em auto 60px auto;
-	display: block;
-	/* width: 1.5em; */
-	width: 90%;
-	border-bottom: 0.2em solid var(--primary);
-}
-
-/* #element[modified]::after {
+/* #element::after {
 	content: '';
 	margin: 0.2em auto 60px auto;
 	display: block;
 	width: 90%;
 	border-bottom: 0.2em solid var(--primary);
 } */
+
+/* Changes */
+mat-sidenav-container {
+	margin-top: 28px;
+}

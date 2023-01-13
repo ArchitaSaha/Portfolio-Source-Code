@@ -23,6 +23,11 @@ export class NavtestComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit(): void {
+		console.log(this.isHidden("mat-sidenav-container"));
+	}
+
+	isHidden(el: any) {
+		return (el.offsetParent === null) || !this.smallScreen;
 	}
 
   	toggleTheme()

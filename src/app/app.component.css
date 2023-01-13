@@ -17,6 +17,8 @@
 	--primary-alt: #185dc7;
 	--primary-light: rgba(44, 93, 206, 0.1);
 	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+
+	--cover: url('/assets/wavesOpacityLight.svg');
 }
 
 .body-dark {
@@ -29,6 +31,7 @@
 	--primary-light: rgb(18 17 49 / 44%);
 	--container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	--cover: url('/assets/wavesOpacityDark.svg');
 }
 
 /* =====================
@@ -98,8 +101,13 @@ footer {
 	position: relative;
 	left: 0;
 	right: 0;
-	background-color: var(--bg-alt);
-	box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1);
+	/* background-color: var(--bg-alt); */
+	/* box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1); */
+	background: var(--cover) no-repeat;
+	/* background-clip: border-box; */
+	background-size: cover;
+	background-color: var(--bg);
+	transform: rotate(180deg);
 }
 
 footer .txt {
@@ -111,13 +119,14 @@ footer .txt {
 	align-content: center;
 	justify-content: center;
 	/* background-color: midnightblue; */
+	transform: rotate(180deg);
 }
 
 footer ul {
 	display: flex;
 }
 
-footer small {
+footer .small {
 	font-weight: 700;
 	/* margin-top: 0.5em; */
 	/* font-family: Merriweather; */
@@ -125,6 +134,7 @@ footer small {
 	letter-spacing: 0.1em;
 	word-spacing: 0.5em;
 	font-size: large;
+	transform: rotate(180deg);
 	/* font-style: italic; */
 }
 
@@ -168,25 +178,6 @@ footer small {
 	.scroll-container {
 		display: none;
 	}
-}
-
-footer {
-	background-color: var(--bg);
-}
-
-button {
-	border: none;
-	cursor: pointer;
-	appearance: none;
-	background-color: inherit;
-	transition: transform 0.7s ease-in-out;
-	margin: 0 10px;
-	border-radius: 50%;
-}
-
-button:hover {
-	transform: rotate(360deg);
-	/* transform: ; */
 }
 
 .txt img {

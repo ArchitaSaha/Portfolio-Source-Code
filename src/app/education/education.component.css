@@ -15,7 +15,8 @@
 	--primary-light: rgba(44, 93, 206, 0.1);
     --text: navy;
 	--div-border: whitesmoke;
-	--container-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+	/* --container-shadow: 0 2px 4px rgb(0 0 0 / 70%); */
+	--container-shadow: 0 8px 16px rgb(0 0 0);
 }
 
 .body-dark {
@@ -130,7 +131,13 @@ section {
     display: block;
     margin: 0 auto;
     width: 300px;
+	box-shadow: var(--container-shadow);
+	border-radius: 10px;
 	/* padding-top: 30px; */
+}
+
+.event img {
+	border-radius: 10px;
 }
 
 .event:hover {
@@ -150,6 +157,7 @@ section {
     position: absolute;
     transition: all .5s ease;
     width: 100%;
+	border-radius: 10px;
 }
 
 .event h3 {

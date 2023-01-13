@@ -25,10 +25,11 @@
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
 	
 			<footer>
-				<small>Mindset is everything</small>
 				<div class="txt">
-					<img [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'">
+					<img class="image" [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'">
+					<!-- <img class="image" [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'"> -->
 				</div>
+				<div class="small" *ngIf="darkTheme">Mindset is everything</div>
 			</footer>
 	
 			<div class="scroll-container">

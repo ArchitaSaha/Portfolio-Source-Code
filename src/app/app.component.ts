@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 	weathercode = [
 		{
 			code: [0],
-			desc: 'Clear sky',
+			desc: 'Clear Sky',
 			icon: faSun
 		},
 		{
@@ -80,24 +80,24 @@ export class AppComponent implements OnInit {
 		{
 			code: [71, 73, 75],
 			// desc: 'Snow fall: Slight, moderate, and heavy intensity',
-			desc: 'Snow fall',
+			desc: 'Snowfall',
 			icon: faTemperatureArrowDown
 		},
 		{
 			code: [77],
-			desc: 'Snow grains',
+			desc: 'Snow Grains',
 			icon: faIcicles
 		},
 		{
 			code: [80, 81, 82],
 			// desc: 'Rain showers: Slight, moderate, and violent',
-			desc: 'Rain showers',
+			desc: 'Rain Showers',
 			icon: faCloudShowersWater
 		},
 		{
 			code: [85, 86],
 			// desc: 'Snow showers slight and heavy',
-			desc: 'Snow showers',
+			desc: 'Snow Showers',
 			icon: faSnowflake
 		},
 		{
@@ -109,7 +109,7 @@ export class AppComponent implements OnInit {
 		{
 			code: [96, 99],
 			// desc: 'Thunderstorm with slight and heavy hail',
-			desc: 'Thunderstorm with hail',
+			desc: 'Thunderstorm with Hail',
 			icon: faCloudBolt
 		},
 	];
@@ -150,7 +150,7 @@ export class AppComponent implements OnInit {
 		if (isPlatformBrowser(this.platformId)) {
 			let loader = this.renderer.selectRootElement('#loader');
 			if (loader.style.display != "none") loader.style.display = "none"; //hide loader
-			console.log("test view init")
+			// console.log("test view init");
 		}
 	}
 
@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
 	getWeatherDescription() {
 		for(let temp of this.weathercode)
 		{
-			console.log(temp);
+			// console.log(temp);
 			if(temp.code.includes(this.wcode)) {
 				this.weatherIcon = temp.icon;
 				this.weather = temp.desc;
@@ -173,7 +173,7 @@ export class AppComponent implements OnInit {
 		// const res = await fetch(`http://ip-api.com/json/`);
 		const res = await fetch('https://ipwho.is/');
 		const json = await res.json();
-		console.log(json);
+		// console.log(json);
 		// console.log(json.lat);
 		// this.latitude = json.lat;
 		// this.longitude = json.lon;
@@ -190,7 +190,7 @@ export class AppComponent implements OnInit {
 		this.temperature = json2.current_weather.temperature;
 		this.wcode = json2.current_weather.weathercode;
 		this.getWeatherDescription();
-		console.log(this.wcode);
+		// console.log(this.wcode);
 
 		// this.http.get(this.urlString).subscribe((res2:any)=>{
 		// 	this.temperature = res2.current_weather.temperature;
@@ -202,7 +202,7 @@ export class AppComponent implements OnInit {
 
 	decide() {
 		this.hours = new Date().getHours();
-		console.log("this.hours",this.hours)
+		// console.log("this.hours",this.hours)
 		if(this.hours < 6){
 			this.msg = "Hello";
 			this.darkTheme = true;
@@ -222,6 +222,10 @@ export class AppComponent implements OnInit {
 		else if(this.hours < 18){
 			this.msg = "Good Evening";
 			this.darkTheme = false;
+		}
+		else if(this.hours < 21){
+			this.msg = "Good Evening";
+			this.darkTheme = true;
 		}
 		else if(this.hours < 24){
 			this.msg = "Bonjour";
