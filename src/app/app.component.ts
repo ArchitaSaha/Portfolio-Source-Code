@@ -170,14 +170,18 @@ export class AppComponent implements OnInit {
 	}
 
 	async getData() {
-		const res = await fetch(`http://ip-api.com/json/`);
+		// const res = await fetch(`http://ip-api.com/json/`);
+		const res = await fetch('https://ipwho.is/');
 		const json = await res.json();
 		console.log(json);
-		console.log(json.lat);
-		this.latitude = json.lat;
-		this.longitude = json.lon;
+		// console.log(json.lat);
+		// this.latitude = json.lat;
+		// this.longitude = json.lon;
+		this.latitude = json.latitude;
+		this.longitude = json.longitude;
 		
-		this.location = json.regionName + ", " + json.country;
+		// this.location = json.regionName + ", " + json.country;
+		this.location = json.region + ", " + json.country;
 
 		this.urlString = "https://api.open-meteo.com/v1/forecast?latitude=" + this.latitude + "&longitude=" + this.longitude + "&current_weather=true&timezone=auto";
 
@@ -203,8 +207,12 @@ export class AppComponent implements OnInit {
 			this.msg = "Hello";
 			this.darkTheme = true;
 		}
-		else if(this.hours < 10){
+		else if(this.hours < 12){
 			this.msg = "Good Morning";
+			this.darkTheme = false;
+		}
+		else if(this.hours == 12){
+			this.msg = "Good Noon";
 			this.darkTheme = false;
 		}
 		else if(this.hours < 16){
