@@ -1,7 +1,7 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 <body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
     <div class="context">
-        <p class="txt-time">{{time | date:'mediumTime'}}</p>
-        <p class="txt-greetings">{{msg}}</p>
-        <p id="location" class="txt-location">{{location}}</p>
+        <p class="txt-time">{{time | date:'medium'}}</p>
+        <p id="location" class="txt-location"><fa-icon [icon]="locationIcon"></fa-icon> {{location}}</p>
     </div>
 </body>

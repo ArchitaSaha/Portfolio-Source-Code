@@ -1,8 +1,10 @@
+import { AnimateTimings } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faChevronUp, faLocationDot, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
+import { faBolt, faChevronUp, faCloudBolt, faCloudRain, faCloudShowersHeavy, faCloudShowersWater, faCloudSun, faDroplet, faIcicles, faLocationDot, faRainbow, faSmog, faSnowflake, faSun, faTemperatureArrowDown, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
 
 // @HostListener("window:scroll", [])
 // @HostListener('window:scroll', ['$event'])
@@ -31,59 +33,84 @@ export class AppComponent implements OnInit {
 	longitude: any;
 	wcode: any;
 	weather: any;
+	weatherIcon: any;
 
 	weathercode = [
 		{
 			code: [0],
-			desc: 'Clear sky'
+			desc: 'Clear sky',
+			icon: faSun
 		},
 		{
 			code: [1, 2, 3],
-			desc: 'Mainly clear, partly cloudy, and overcast'
+			// desc: 'Mainly clear, partly cloudy, and overcast',
+			desc: 'Cloudy',
+			icon: faCloudSun
 		},
 		{
 			code: [45, 48],
-			desc: 'Fog and depositing rime fog'
+			// desc: 'Fog and depositing rime fog',
+			desc: 'Fog',
+			icon: faSmog
 		},
 		{
 			code: [51, 53, 55],
-			desc: 'Drizzle: Light, moderate, and dense intensity'
+			// desc: 'Drizzle: Light, moderate, and dense intensity',
+			desc: 'Drizzle',
+			icon: faRainbow
 		},
 		{
 			code: [56, 57],
-			desc: 'Freezing Drizzle: Light and dense intensity'
+			// desc: 'Freezing Drizzle: Light and dense intensity',
+			desc: 'Freezing Drizzle',
+			icon: faDroplet
 		},
 		{
 			code: [61, 63, 65],
-			desc: 'Rain: Slight, moderate and heavy intensity'
+			// desc: 'Rain: Slight, moderate and heavy intensity',
+			desc: 'Rain',
+			icon: faCloudRain
 		},
 		{
 			code: [66, 67],
-			desc: 'Freezing Rain: Light and heavy intensity'
+			// desc: 'Freezing Rain: Light and heavy intensity',
+			desc: 'Freezing Rain',
+			icon: faCloudShowersHeavy
 		},
 		{
 			code: [71, 73, 75],
-			desc: 'Snow fall: Slight, moderate, and heavy intensity'
+			// desc: 'Snow fall: Slight, moderate, and heavy intensity',
+			desc: 'Snow fall',
+			icon: faTemperatureArrowDown
 		},
 		{
 			code: [77],
-			desc: 'Snow grains'
+			desc: 'Snow grains',
+			icon: faIcicles
 		},
 		{
 			code: [80, 81, 82],
-			desc: 'Rain showers: Slight, moderate, and violent'
+			// desc: 'Rain showers: Slight, moderate, and violent',
+			desc: 'Rain showers',
+			icon: faCloudShowersWater
 		},
 		{
 			code: [85, 86],
-			desc: 'Snow showers slight and heavy'
+			// desc: 'Snow showers slight and heavy',
+			desc: 'Snow showers',
+			icon: faSnowflake
 		},
 		{
 			code: [95],
-			desc: 'Thunderstorm: Slight or moderate'
+			// desc: 'Thunderstorm: Slight or moderate',
+			desc: 'Thunderstorm',
+			icon: faBolt
 		},
 		{
 			code: [96, 99],
-			desc: 'Thunderstorm with slight and heavy hail'
+			// desc: 'Thunderstorm with slight and heavy hail',
+			desc: 'Thunderstorm with hail',
+			icon: faCloudBolt
 		},
 	];
 
@@ -135,13 +162,11 @@ export class AppComponent implements OnInit {
 		for(let temp of this.weathercode)
 		{
 			console.log(temp);
-			// for(let t2 of temp.code)
-			// {
-			// 	console.log(t2);
-			// }
-			if(temp.code.includes(this.wcode))	return temp.desc;
+			if(temp.code.includes(this.wcode)) {
+				this.weatherIcon = temp.icon;
+				this.weather = temp.desc;
+			}
 		}
-		return "";
 	}
 
 	async getData() {
@@ -160,7 +185,7 @@ export class AppComponent implements OnInit {
 		const json2 = await res2.json();
 		this.temperature = json2.current_weather.temperature;
 		this.wcode = json2.current_weather.weathercode;
-		this.weather = this.getWeatherDescription();
+		this.getWeatherDescription();
 		console.log(this.wcode);
 
 		// this.http.get(this.urlString).subscribe((res2:any)=>{
@@ -175,7 +200,7 @@ export class AppComponent implements OnInit {
 		this.hours = new Date().getHours();
 		console.log("this.hours",this.hours)
 		if(this.hours < 6){
-			this.msg = "Sweet Dreams";
+			this.msg = "Hello";
 			this.darkTheme = true;
 		}
 		else if(this.hours < 10){
@@ -191,7 +216,7 @@ export class AppComponent implements OnInit {
 			this.darkTheme = false;
 		}
 		else if(this.hours < 24){
-			this.msg = "Good Night";
+			this.msg = "Bonjour";
 			this.darkTheme = true;
 		}
 	}

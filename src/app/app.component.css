@@ -85,11 +85,14 @@ body {
    ============= */
 
 footer {
-	display: flex;
+	/* display: flex; */
+	/* display: block; */
 	align-items: center;
-	flex-wrap: wrap;
-	/* margin-top: 5em; */
-	height: 7em;
+	align-content: center;
+	text-align: center;
+	/* flex-wrap: wrap; */
+	padding: 30px 0 100px 0;
+	height: 8em;
 	/* flex-direction: row; */
 	justify-content: center;
 	position: relative;
@@ -99,26 +102,30 @@ footer {
 	box-shadow: 0 -0.1em 1em rgb(0, 0, 0, 0.1);
 }
 
+footer .txt {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	/* background-color: midnightblue; */
+}
+
 footer ul {
 	display: flex;
 }
 
 footer small {
-	font-weight: 500;
-	margin-top: 0.5em;
+	font-weight: 700;
+	/* margin-top: 0.5em; */
 	/* font-family: Merriweather; */
 	font-family: Moon Dance;
 	letter-spacing: 0.1em;
 	word-spacing: 0.5em;
 	font-size: large;
 	/* font-style: italic; */
-}
-
-footer small i {
-	font-family: Moon Dance;
-	font-weight: 600;
-	font-size: medium;
-	letter-spacing: 0.3em;
 }
 
 /* =================
@@ -182,7 +189,7 @@ button:hover {
 	/* transform: ; */
 }
 
-img {
-	width: 32px;
-	height: 32px;
+.txt img {
+	/* width: 32px; */
+	height: 50px;
 }

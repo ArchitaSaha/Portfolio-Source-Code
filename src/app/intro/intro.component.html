@@ -3,6 +3,16 @@
         <div class="card">
             <div class="cover-photo">
                 <img src="assets/portrait.jpg" class="profile">
+                <div class="weather">
+                    <p>
+                        <fa-icon [icon]="temperatureIcon"></fa-icon>
+                        &nbsp;{{temperature}} °C
+                    <!-- </p>
+					<p> -->
+                        <fa-icon [icon]="weatherIcon"></fa-icon>
+                        &nbsp;{{weather}}
+                    </p>
+                </div>
             </div>
             <h3 class="profile-name">Archita Saha</h3>
             <p class="about">Cloud Engineer<br>Aspiring FSE Developer</p>
@@ -23,6 +33,7 @@
         </div>
     
         <div class="hero-about">
+            <h2>{{msg}},</h2>
             <p>
                 I am a passionate Cloud Engineer with 1+ years of experience in GCP. Seeking an opportunity to work in a challenging environment to build innovative and cutting-edge business solutions. I enjoy writing clean code, building beautiful user interfaces and more.
             </p>
