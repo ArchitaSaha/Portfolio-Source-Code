@@ -18,7 +18,6 @@
 
 .body-dark {
 	--bg: #030217;
-	/* --bg-alt: rgb(22 28 41 / 33%); */
 	--bg-alt: rgb(22 28 41 / 50%);
     --bg-alt2: rgb(22, 16, 52);
 	--fg: #bdbddd;
@@ -36,14 +35,6 @@
      2. global styles
    ===================== */
 
-/* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	box-shadow: none;
-} */
-
 ::-moz-selection {
 	background: var(--primary);
 	color: var(--bg);
@@ -57,9 +48,7 @@
 
 body {
 	margin: 0 auto;
-	/* max-width: 1100px; */
 	width: 100%;
-	/* background-color: var(--bg); */
     background-color: transparent;
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
@@ -104,7 +93,6 @@ section {
 
 .stack {
     padding-top: 3em;
-	/* background-color: azure; */
 }
 
 @media (max-width: 580px) {
@@ -141,9 +129,7 @@ section {
 
 .container .card .face.face1 {
     position: relative;
-    /* background: #333; */
     background: var(--bg-alt2);
-    /* background: salmon; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +138,6 @@ section {
 }
 
 .container .card:hover .face.face1 {
-    /* background: #ff0057; */
     background: var(--primary-alt2);
     transform: translateY(0);
     box-shadow: 0 6px 12px midnightblue;
@@ -165,9 +150,6 @@ section {
 .container .card .face.face1 .content {
     opacity: 1;
     transition: 0.5s;
-    /* justify-content: center;
-    justify-items: center;
-    align-items: center; */
     text-align: center;
 }
 
@@ -190,7 +172,6 @@ section {
 
 .container .card .face.face2 {
     position: relative;
-    /* background: #fff; */
     display: flex;
     justify-content: center;
     align-items: center;

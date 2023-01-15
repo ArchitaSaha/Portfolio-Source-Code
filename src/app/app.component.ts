@@ -1,12 +1,9 @@
-import { AnimateTimings } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faChevronUp, faCloudBolt, faCloudRain, faCloudShowersHeavy, faCloudShowersWater, faCloudSun, faDroplet, faIcicles, faLocationDot, faRainbow, faSmog, faSnowflake, faSun, faTemperatureArrowDown, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
 
-// @HostListener("window:scroll", [])
-// @HostListener('window:scroll', ['$event'])
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
@@ -21,7 +18,6 @@ export class AppComponent implements OnInit {
 	temperatureIcon = faTemperatureThreeQuarters;
 
 	darkTheme = false;
-	bg=(this.darkTheme)? "#030217" : "#f5f6f7";
 
 	time: any;
 	hours: any;
@@ -116,7 +112,6 @@ export class AppComponent implements OnInit {
 
 	images = [
 		{
-			// imageSrc: 'https://github.com/ArchitaSaha/Portfolio/blob/main/Associate%20Cloud%20Engineer.png?raw=true, https://github.com/ArchitaSaha/Portfolio/blob/main/Associate%20Cloud%20Engineer.png?raw=true 0.25x, https://github.com/ArchitaSaha/Portfolio/blob/main/Associate%20Cloud%20Engineer.png?raw=true 0.5x',
 			imageSrc: 'assets/AssociateCloudEngineer.png',
 			imageAlt: 'Associate Cloud Engineer'
 		},
@@ -149,36 +144,17 @@ export class AppComponent implements OnInit {
 	ngAfterViewInit(): void {
 		if (isPlatformBrowser(this.platformId)) {
 			let loader = this.renderer.selectRootElement('#loader');
-			if (loader.style.display != "none") loader.style.display = "none"; //hide loader
-			// console.log("test view init");
+			if (loader.style.display != "none") loader.style.display = "none";
 		}
 	}
 
 	ngOnInit(): void {
 		this.getData();
-
-		let obj:any = document.getElementById("counter");
-
-		(() => {
-			if(typeof(Storage) !== "undefined") {
-				if(sessionStorage['count']) {
-					sessionStorage['count'] = Number(sessionStorage['count']) + 1;
-				}
-				else {
-					sessionStorage['count'] = 1;
-				}
-				(obj).innerHTML = "You have visited this webpage " + sessionStorage['count'] + " time(s) in this session.";
-			}
-			else {
-				(obj).innerHTML = "Sorry, your browser does not support web storage ...";
-			}
-		})();
 	}
 
 	getWeatherDescription() {
 		for(let temp of this.weathercode)
 		{
-			// console.log(temp);
 			if(temp.code.includes(this.wcode)) {
 				this.weatherIcon = temp.icon;
 				this.weather = temp.desc;
@@ -187,17 +163,11 @@ export class AppComponent implements OnInit {
 	}
 
 	async getData() {
-		// const res = await fetch(`http://ip-api.com/json/`);
 		const res = await fetch('https://ipwho.is/');
 		const json = await res.json();
-		// console.log(json);
-		// console.log(json.lat);
-		// this.latitude = json.lat;
-		// this.longitude = json.lon;
 		this.latitude = json.latitude;
 		this.longitude = json.longitude;
 		
-		// this.location = json.regionName + ", " + json.country;
 		this.location = json.region + ", " + json.country;
 
 		this.urlString = "https://api.open-meteo.com/v1/forecast?latitude=" + this.latitude + "&longitude=" + this.longitude + "&current_weather=true&timezone=auto";
@@ -207,19 +177,10 @@ export class AppComponent implements OnInit {
 		this.temperature = json2.current_weather.temperature;
 		this.wcode = json2.current_weather.weathercode;
 		this.getWeatherDescription();
-		// console.log(this.wcode);
-
-		// this.http.get(this.urlString).subscribe((res2:any)=>{
-		// 	this.temperature = res2.current_weather.temperature;
-		// 	this.wcode = res2.current_weather.weathercode;
-		// 	// this.weather = this.weathercode.filter(this.getWeatherDescription);
-		// 	console.log(this.wcode);
-		// });
 	}
 
 	decide() {
 		this.hours = new Date().getHours();
-		// console.log("this.hours",this.hours)
 		if(this.hours < 6){
 			this.msg = "Hello";
 			this.darkTheme = true;

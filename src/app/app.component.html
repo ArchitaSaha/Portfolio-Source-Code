@@ -1,21 +1,9 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=0.5">
-
-		<!-- Chrome, Opera, Firefox -->
-		<!-- <meta name="theme-color" content="#4B0082"> -->
-
-		<!-- Windows -->
-		<!-- <meta name="msapplication-navbutton-color" content="#4B0082"> -->
-
-		<!-- Safari -->
-		<!-- <meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#4B0082"> -->
-
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display&display=swap" rel="stylesheet">
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 		<script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
@@ -35,17 +23,15 @@
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
 	
 			<footer>
-				<!-- <div id="counter" class="small"></div> -->
 				<div class="small">Mindset is everything</div>
 				<div class="txt">
-					<img class="image" [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'">
-					<!-- <img class="image" [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'"> -->
+					<img class="image" [src]="darkTheme ? 'assets/borderDark.png' : 'assets/borderLight.png'">>
 				</div>
 			</footer>
 	
 			<div class="scroll-container">
 				<div aria-label="Scroll up" class="scroll-up">
-					<a href="#top">
+					<a onclick="window.scrollTo(top)">
 						<fa-icon [icon]="scrollIcon" aria-hidden="true" class="fas fa-arrow-up"></fa-icon>
 					</a>
 				</div>

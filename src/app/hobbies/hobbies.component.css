@@ -20,7 +20,6 @@
 
 .body-dark {
 	--bg: #030217;
-	/* --bg-alt: rgb(22 28 41 / 33%); */
 	--bg-alt: rgb(22 28 41 / 50%);
     --bg-alt2: rgb(22, 16, 52);
 	--fg: #bdbddd;
@@ -54,9 +53,7 @@
 body {
 	margin: 0 auto 160px auto;
     padding: 0 15%;
-	/* max-width: 1100px; */
 	width: 100%;
-	/* background-color: var(--bg); */
     background-color: transparent;
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
@@ -98,7 +95,6 @@ h2 {
 .stack {
     padding-top: 3em;
     margin-top: 5em;
-	/* background-color: azure; */
 }
 
 @media (max-width: 580px) {
@@ -148,11 +144,7 @@ h2 {
 }
 
 .card:hover {
-    /* transform: scale(0.9, 0.9); */
-    /* transform: scale(1.2, 1.2); */
     box-shadow: 0 8px 16px midnightblue;
-    /* box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),  */
-        /* -5px -5px 30px 15px rgba(0,0,0,0.22); */
 }
 
 .title-white {

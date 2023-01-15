@@ -6,7 +6,6 @@
 
 .body-light {
 	--bg: #f5f6f7;
-	/* --bg-alt: #fff; */
 	--bg-alt: rgba(177, 202, 236, 0.7);
 	--fg: #444;
 	--fg-alt: #222;
@@ -32,23 +31,10 @@
      2. global styles
    ===================== */
 
-/* ::-moz-selection {
-	background: var(--primary);
-	color: var(--bg);
-} */
-
-/* ::-webkit-selection,
-::selection {
-	background: var(--primary);
-	color: var(--bg);
-} */
-
 body {
 	margin: 0 0;
 	width: 100%;
-	/* overflow: hidden; */
 	background-color: var(--bg);
-	/* background-color: salmon; */
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
 	font-size: large;
@@ -72,8 +58,6 @@ button {
 	background-color: inherit;
 	border: none;
 	outline: none;
-	/* margin-left: 15px;
-	margin-right: 15px; */
 }
 
 /* =================
@@ -92,7 +76,6 @@ button {
 	z-index: 1;
 	cursor: pointer;
 	border-radius: 50%;
-	/* font-size: 1.2rem; */
 	font-size: 2rem;
 }
 
@@ -140,12 +123,9 @@ button {
   }
 
 mat-toolbar-row{
-    /* background-color: var(--bg); */
 	background-color: transparent;
-	/* background-color: lavender; */
 	font-weight: 500;
 	margin: 0 0.5em;
-	/* margin-top: 1em; */
 }
 
 .hero {
@@ -156,18 +136,15 @@ mat-toolbar-row{
 /* Changes v2 */
 mat-nav-list {
 	background-color: var(--bg-alt);
-	/* background-color: lemonchiffon; */
 	width: 100%;
 }
 
 mat-sidenav {
 	width: 100%;
-	/* transition: 1s; */
 }
 
 a {
 	text-decoration: none;
-	/* margin: 0 10px; */
 	margin-right: 20px;
 }
 
@@ -175,18 +152,15 @@ a {
 	padding: 0 0 0.12em 0;
 	position: relative;
 	color: var(--fg-alt);
-	/* color: mediumvioletred */
 }
 
 .link:hover {
 	color: var(--fg-alt);
-	/* color: salmon; */
 	transform: ease-in-out;
 }
 
 .link:active {
 	color: var(--fg-alt);
-	/* color: seagreen; */
 }
 
 .link::before {
@@ -197,23 +171,12 @@ a {
 	position: absolute;
 	bottom: 0;
 	background-color: var(--primary);
-	/* background-color: red; */
-	/* color: lime; */
 	transition: width 0.3s ease-out;
 }
 
 .link:hover::before {
 	width: 100%;
-	/* background-color: lime; */
 }
-
-/* #element::after {
-	content: '';
-	margin: 0.2em auto 60px auto;
-	display: block;
-	width: 90%;
-	border-bottom: 0.2em solid var(--primary);
-} */
 
 /* Changes */
 mat-sidenav-container {

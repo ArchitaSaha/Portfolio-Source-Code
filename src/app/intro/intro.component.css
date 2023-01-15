@@ -7,15 +7,12 @@
    .body-light {
 	--bg: #f5f6f7;
 	--bg-alt: #fff;
-    /* --bg-alt: rgb(f5 f6 f7 / 100%); */
 	--fg: #444;
 	--fg-alt: #222;
 	--primary: #306cc4;
 	--primary-alt: #1557ba;
 	--primary-light: rgba(44, 93, 206, 0.1);
-	/* --container-shadow: 0 2px 4px rgb(0 0 0 / 10%); */
 	--container-shadow: 0 2px 4px rgb(0 0 0 / 40%);
-
     --cover: url(https://www.nsbpictures.com/wp-content/uploads/2020/04/sunset-hd-background-photos-12-scaled.jpg);
 	--cover-text: black;
 	--weather-background: rgba(236, 228, 228, 0.6);
@@ -23,19 +20,14 @@
 
 .body-dark {
 	--bg: #030217;
-	/* --bg-alt: rgb(22 28 41 / 33%); */
     --bg-alt: rgb(22 28 41 / 50%);
 	--fg: #bdbddd;
 	--fg-alt: #cdcdff;
 	--primary: #807ae8;
 	--primary-alt: #706aec;
 	--primary-light: rgb(18 17 49 / 44%);
-	/* --container-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px; */
 	--container-shadow: 0 2px 4px rgba(53, 57, 102, 0.726);
-    
-    /* --cover: url(https://i.imgur.com/jxyuizJ.jpeg); */
-	--cover: url(https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmlnaHR8ZW58MHx8MHx8&w=1000&q=80);
-	/* --cover: url(https://e1.pxfuel.com/desktop-wallpaper/670/906/desktop-wallpaper-the-sky-landscape-mountains-night-fog-darkness-moon-landscape-mountains-stars-darkness-full-moon-lighting-foggy-moody-otto-hutter-section-%D0%BF%D0%B5%D0%B9%D0%B7%D0%B0%D0%B6%D0%B8-dark-moody-thumbnail.jpg); */
+    --cover: url(https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmlnaHR8ZW58MHx8MHx8&w=1000&q=80);
 	--cover-text: whitesmoke;
 	--weather-background: rgba(236, 228, 228, 0.07);
 }
@@ -48,9 +40,7 @@ body {
 	margin: 14em auto 0 auto;
 	margin-bottom: 60px;
 	padding: 0 15%;
-	/* max-width: 1100px; */
 	width: 100%;
-	/* background-color: var(--bg); */
 	background-color: transparent;
 	color: var(--fg);
 	font-family: 'Poppins', sans-serif;
@@ -82,15 +72,11 @@ a {
 
 .hero-about p {
 	font-size: 1.6rem;
-	/* margin-left: 10%; */
 	margin-top: 30px;
-    /* text-align: justify; */
 }
 
 .hero-about .btn {
 	margin-top: 2.2em;
-	/* background-color: lemonchiffon; */
-	/* margin-left: 10%; */
 }
 
 .hero {
@@ -172,12 +158,9 @@ a {
 .cover-photo .weather {
 	color: var(--cover-text);
 	display: inline-block;
-	/* display: flex; */
-	/* flex-wrap: wrap; */
 	right: 0;
 	top: 0;
 	position: absolute;
-	/* justify-content: space-between; */
 
 	/* From https://css.glass */
 	background: var(--weather-background);
@@ -194,8 +177,6 @@ a {
     bottom: -60px;
     left: 15px;
     border-radius: 50%;
-    /* border: 2px solid #222;
-    background: #222; */
     border: 2px solid var(--bg-alt);
     background: var(--bg-alt);
     padding: 5px;
@@ -204,7 +185,6 @@ a {
 .profile-name {
     font-size: 20px;
     margin: 25px 0 0 120px;
-    /* color: #fff; */
     color: var(--fg-alt);
 }
 
@@ -219,7 +199,6 @@ a {
     margin: 0 auto 10px;
     display: flex;
     justify-content: space-between;
-    /* gap: 15px; */
 }
 
 .icons a fa-icon {
