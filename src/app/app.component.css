@@ -120,6 +120,7 @@ footer .txt {
 	justify-content: center;
 	/* background-color: midnightblue; */
 	transform: rotate(180deg);
+	padding-bottom: 1.5em;
 }
 
 footer ul {
@@ -130,12 +131,25 @@ footer .small {
 	font-weight: 700;
 	/* margin-top: 0.5em; */
 	/* font-family: Merriweather; */
-	font-family: Moon Dance;
+	font-family: Playfair Display;
 	letter-spacing: 0.1em;
 	word-spacing: 0.5em;
-	font-size: large;
+	font-size: medium;
 	transform: rotate(180deg);
 	/* font-style: italic; */
+	/* background-color: pink; */
+	/* height: 1em; */
+	/* width: 50%; */
+
+	/* From https://css.glass */
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 4px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(3.6px);
+	-webkit-backdrop-filter: blur(3.6px);
+	margin-left: 40%;
+	margin-right: 40%;
+	color: whitesmoke;	/* font-style: italic; */
 }
 
 /* =================
@@ -177,6 +191,12 @@ footer .small {
 @media (max-width: 1000px) {
 	.scroll-container {
 		display: none;
+	}
+
+	.small {
+		margin-left: 25%;
+		margin-right: 25%;
+		/* background-color: salmon; */
 	}
 }
 

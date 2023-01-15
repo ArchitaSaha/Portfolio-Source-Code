@@ -2,7 +2,6 @@ import { AnimateTimings } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
-import { icon } from '@fortawesome/fontawesome-svg-core';
 import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faChevronUp, faCloudBolt, faCloudRain, faCloudShowersHeavy, faCloudShowersWater, faCloudSun, faDroplet, faIcicles, faLocationDot, faRainbow, faSmog, faSnowflake, faSun, faTemperatureArrowDown, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
 
@@ -22,6 +21,7 @@ export class AppComponent implements OnInit {
 	temperatureIcon = faTemperatureThreeQuarters;
 
 	darkTheme = false;
+	bg=(this.darkTheme)? "#030217" : "#f5f6f7";
 
 	time: any;
 	hours: any;
@@ -156,6 +156,23 @@ export class AppComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.getData();
+
+		let obj:any = document.getElementById("counter");
+
+		(() => {
+			if(typeof(Storage) !== "undefined") {
+				if(sessionStorage['count']) {
+					sessionStorage['count'] = Number(sessionStorage['count']) + 1;
+				}
+				else {
+					sessionStorage['count'] = 1;
+				}
+				(obj).innerHTML = "You have visited this webpage " + sessionStorage['count'] + " time(s) in this session.";
+			}
+			else {
+				(obj).innerHTML = "Sorry, your browser does not support web storage ...";
+			}
+		})();
 	}
 
 	getWeatherDescription() {
