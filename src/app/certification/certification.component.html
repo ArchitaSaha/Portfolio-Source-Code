@@ -1,0 +1,61 @@
+<body [ngClass]="darkTheme ? 'body-dark' : 'body-light'">
+    <div id="certifications" style="height: 90px; background-color: transparent;"></div>
+    <h2 class="section-title">CERTIFICATIONS</h2>
+    <!-- Full-width images with number and caption text -->
+    <div class="container">
+        <div class="ombre-externe">
+            <div class="ombre-interne">
+                <div class="peinture-ombre-interne-fine">
+                    <div class="carousel-container">
+                        <div class="mySlides animate">
+                            <img src="assets/AssociateCloudEngineer.png" alt="Associate Cloud Engineer" />
+                            <div class="number">1 / 5</div>
+                            <div class="text">Associate Cloud Engineer</div>
+                        </div>
+                    
+                        <div class="mySlides animate">
+                            <img src="assets/AWSFundamentals1.jpeg" alt="AWS Fundamentals : Going Cloud Native" />
+                            <div class="number">2 / 5</div>
+                            <div class="text">AWS Fundamentals : Going Cloud Native</div>
+                        </div>
+                    
+                        <div class="mySlides animate">
+                            <img src="assets/AWSFundamentals2.jpeg" alt="AWS Fundamentals : Addressing Security Risk" />
+                            <div class="number">3 / 5</div>
+                            <div class="text">AWS Fundamentals : Addressing Security Risk</div>
+                        </div>
+                    
+                        <div class="mySlides animate">
+                            <img src="assets/ProgrammingInJava.jpg" alt="NPTEL : Programming In Java" />
+                            <div class="number">4 / 5</div>
+                            <div class="text">NPTEL : Programming In Java</div>
+                        </div>
+                    
+                        <div class="mySlides animate">
+                            <img src="assets/CoreJavaTraining-CertificateOfExcellence.jpg" alt="Internshala : Core Java" />
+                            <div class="number">5 / 5</div>
+                            <div class="text">Internshala : Core Java</div>
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" (click)="prevSlide()">
+                            <fa-icon [icon]="leftIndicatorIcon" class="icon-carousel"></fa-icon>
+                        </a>
+                        <a class="next" (click)="nextSlide()">
+                            <fa-icon [icon]="rightIndicatorIcon" class="icon-carousel"></fa-icon>
+                        </a>
+                    
+                        <!-- The dots/circles -->
+                        <div class="dots-container">
+                            <span class="dots" (click)="currentSlide(1)"></span>
+                            <span class="dots" (click)="currentSlide(2)"></span>
+                            <span class="dots" (click)="currentSlide(3)"></span>
+                            <span class="dots" (click)="currentSlide(4)"></span>
+                            <span class="dots" (click)="currentSlide(5)"></span>
+                        </div>
+                    </div>
+                </div><!--cadre-ombre-interne-fine -->
+            </div><!-- ombre-interne -->
+        </div><!-- ombre-externe -->
+    </div>
+</body>

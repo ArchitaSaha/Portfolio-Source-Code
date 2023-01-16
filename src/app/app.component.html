@@ -17,7 +17,7 @@
 			<app-education [darkTheme]="darkTheme"></app-education>
 			<app-skillset [darkTheme]="darkTheme"></app-skillset>
 			<app-projects [darkTheme]="darkTheme"></app-projects>
-			<app-work [darkTheme]="darkTheme" [images]="images" [autoSlide]="true" [slideInterval]="5000"></app-work>
+			<app-certification [darkTheme]="darkTheme"></app-certification>
 			<app-research [darkTheme]="darkTheme"></app-research>
 			<app-hobbies [darkTheme]="darkTheme"></app-hobbies>
 			<app-contacts [darkTheme]="darkTheme"></app-contacts>
@@ -31,7 +31,7 @@
 	
 			<div class="scroll-container">
 				<div aria-label="Scroll up" class="scroll-up">
-					<a onclick="window.scrollTo(top)">
+					<a *ngIf="isShow" (click)="gotoTop()">
 						<fa-icon [icon]="scrollIcon" aria-hidden="true" class="fas fa-arrow-up"></fa-icon>
 					</a>
 				</div>

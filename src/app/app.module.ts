@@ -18,7 +18,6 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsetComponent } from './skillset/skillset.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { WorkComponent } from './work/work.component';
 import { ResearchComponent } from './research/research.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
@@ -26,6 +25,7 @@ import { HobbiesComponent } from './hobbies/hobbies.component';
 import { NavtestComponent } from './navtest/navtest.component';
 import { IntroComponent } from './intro/intro.component';
 import { TimeComponent } from './time/time.component';
+import { CertificationComponent } from './certification/certification.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +33,14 @@ import { TimeComponent } from './time/time.component';
     ProjectsComponent,
     SkillsetComponent,
     ContactsComponent,
-    WorkComponent,
     ResearchComponent,
     ExperienceComponent,
     EducationComponent,
     HobbiesComponent,
     NavtestComponent,
     IntroComponent,
-    TimeComponent
+    TimeComponent,
+    CertificationComponent
   ],
   imports: [
     BrowserModule,

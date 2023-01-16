@@ -1,6 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { faHackerrank, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faBolt, faChevronUp, faCloudBolt, faCloudRain, faCloudShowersHeavy, faCloudShowersWater, faCloudSun, faDroplet, faIcicles, faLocationDot, faRainbow, faSmog, faSnowflake, faSun, faTemperatureArrowDown, faTemperatureThreeQuarters } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,6 +18,9 @@ export class AppComponent implements OnInit {
 	temperatureIcon = faTemperatureThreeQuarters;
 
 	darkTheme = false;
+
+	isShow: boolean | undefined;
+	topPosToStartShowing = 300;
 
 	time: any;
 	hours: any;
@@ -110,29 +113,6 @@ export class AppComponent implements OnInit {
 		},
 	];
 
-	images = [
-		{
-			imageSrc: 'assets/AssociateCloudEngineer.png',
-			imageAlt: 'Associate Cloud Engineer'
-		},
-		{
-			imageSrc: 'assets/AWSFundamentals1.jpeg',
-			imageAlt: 'AWS Fundamentals : Going Cloud Native'
-		},
-		{
-			imageSrc: 'assets/AWSFundamentals2.jpeg',
-			imageAlt: 'AWS Fundamentals : Addressing Security Risk'
-		},
-		{
-			imageSrc: 'assets/ProgrammingInJava.jpg',
-			imageAlt: 'NPTEL : Programming In Java'
-		},
-		{
-			imageSrc: 'assets/CoreJavaTraining-CertificateOfExcellence.jpg',
-			imageAlt: 'Internshala : Core Java'
-		}
-	];
-
 	constructor(@Inject(PLATFORM_ID) private platformId: Object, private renderer: Renderer2, private http: HttpClient) {
 		setInterval(() => {
 			this.time = new Date();
@@ -213,5 +193,25 @@ export class AppComponent implements OnInit {
 
 	toggleTheme(theme: boolean) {
 		this.darkTheme = theme;
+	}
+
+	@HostListener('window:scroll')
+	checkScroll() {
+
+		const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+		if (scrollPosition >= this.topPosToStartShowing) {
+			this.isShow = true;
+		}
+		else {
+			this.isShow = false;
+		}
+	}
+
+	gotoTop() {
+		window.scroll({ 
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		});
 	}
 }
